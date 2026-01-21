@@ -1,7 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
 
 package runners;
 
@@ -12,13 +8,17 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"pretty", "html:target/cucumber-report"},
-        features = {"classpath:features/"},
-        glue = {"stepsDefinitions"},
+        features = "classpath:features/",
+        glue = "stepsDefinitions",
         tags = "@Pesquisa",
+        plugin = {
+                "pretty",
+                "html:target/cucumber-report",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+        },
         snippets = SnippetType.CAMELCASE,
         monochrome = true,
         dryRun = false
 )
-class CT_PesquisaProduto {
+public class CT_PesquisaProdutoTest {
 }
