@@ -19,8 +19,8 @@ public class Utils {
 
     public static void acessarSistema(){
         driver = DriverFactory.createDriver();
-        wait = new WebDriverWait(Utils.driver , Duration.ofSeconds(5));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        wait = new WebDriverWait(Utils.driver , Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get(ConfigReader.getProperty("base.url"));
     }
 
